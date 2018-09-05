@@ -15,7 +15,8 @@ public class ArrayUtil {
 		printArray(intBoxing(ts));
 	}
 	public static Integer[] intBoxing(int[] intArray){
-		return (Integer[]) Array.newInstance(Integer[].class, intArray);
+		Integer[] ints = new Integer[]{intarray}
+		return null;
 	}
 	
 	public static Integer intBoxing(int i){

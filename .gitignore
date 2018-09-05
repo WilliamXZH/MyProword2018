@@ -1,8 +1,9 @@
-*/.metadata
+*.class
+!*.java
 !/*/src
+*/.metadata
 */.settings
 */bin
 */.classpath
 */.project
-*.class
 */Servers
