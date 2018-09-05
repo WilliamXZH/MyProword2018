@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Test1 -->
+	<!-- read custom configuration file -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="project.properties" />
+	</bean>
+
+	<bean id="test1" class="com.hand.model.User">
+		<property name="username" value="${user.username}" />
+		<property name="password" value="${user.password}" />
+	</bean>
+
+
+	<!-- Test2 -->
+	<!-- Dependency injection by constructor method -->
+	<bean id="test2" class="com.hand.model.User">
+		<!-- <property name="username" value="will-02" /> -->
+		<!-- <property name="password" value="12321" /> -->
+		<constructor-arg value="will-02" />
+		<constructor-arg value="12321"/>
+		<!-- <constructor-arg name="username" value="will-02" />
+		<constructor-arg name="password" value="12321"/> -->
+	</bean>
+
+
+	<!-- Test3 -->
+	<!-- Collection injection -->
+	<bean id="test3" class="com.hand.model.User">
+		<property name="username" value="will-03" />
+		<property name="password" value="12321" />
+		<property name="customerType" value="Dealer" />
+		<property name="phoneSet">
+			<set>
+				<value>111</value>
+				<value>222</value>
+				<value>333</value>
+			</set>
+		</property>
+	</bean>
+
+
+	<!-- Test4 -->
+	<!-- bean inherit -->
+	<bean name="userDefault1" class="com.hand.model.User">
+		<property name="username" value="will-04-2" />
+		<property name="password" value="12321" />
+		<property name="customerType" value="Dealer" />
+	</bean>
+
+	<bean id="test4_1" class="com.hand.model.User" parent="userDefault1">
+		<property name="customerType">
+			<null />
+		</property>
+	</bean>
+
+	<!-- abstract -->
+	<bean name="userDefault2" abstract="true">
+		<property name="username" value="will-04-2" />
+		<property name="password" value="12321" />
+		<property name="customerType" value="Dealer" />
+	</bean>
+
+	<bean id="test4_2" class="com.hand.model.User" parent="userDefault2">
+		<property name="customerType">
+			<null />
+		</property>
+	</bean>
+
+
+	<!-- Test5 -->
+	<!-- bean scope -->
+	<bean name="test5_1" class="com.hand.model.User" scope="singleton">
+		<property name="username" value="will-05-1" />
+		<property name="password" value="12321" />
+		<property name="customerType" value="Dealer" />
+	</bean>
+
+	<bean name="test5_2" class="com.hand.model.User" scope="prototype">
+		<property name="username" value="will-05-2" />
+		<property name="password" value="12321" />
+		<property name="customerType" value="Dealer" />
+	</bean>
+
+	<!-- Test6 -->
+	<!-- Dependency Injection -->
+	<bean id="user6" class="com.hand.model.User">
+		<property name="username" value="will-06" />
+		<property name="password" value="12321" />
+		<property name="customerType" value="Dealer" />
+		<property name="phoneSet">
+			<set>
+				<value>111</value>
+				<value>222</value>
+				<value>333</value>
+			</set>
+		</property>
+	</bean>
+	<bean name="customer6" class="com.hand.dao.impl.CustomerDaoImpl">
+	</bean>
+
+	<bean name="employee6" class="com.hand.dao.impl.EmployeeDaoImpl">
+	</bean>
+
+	<bean id="userService6" class="com.hand.service.UserService">
+		<property name="userDao" ref="customer6" />
+	</bean>
+
+
+	<!-- Test7 -->
+	<!-- Autowire & alias -->
+	<bean id="user7" class="com.hand.model.User">
+		<property name="username" value="will-06" />
+		<property name="password" value="12321" />
+		<property name="customerType" value="Dealer" />
+		<property name="phoneSet">
+			<set>
+				<value>111</value>
+				<value>222</value>
+				<value>333</value>
+			</set>
+		</property>
+	</bean>
+	<bean name="customer7" class="com.hand.dao.impl.CustomerDaoImpl">
+	</bean>
+
+	<alias name="employee7" alias="userDao" />
+	<bean name="employee7" class="com.hand.dao.impl.EmployeeDaoImpl">
+	</bean>
+
+	<bean id="userService7" class="com.hand.service.UserService" autowire="byName">
+	</bean>
+</beans>

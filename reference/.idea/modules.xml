@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/08_spring_01_interface/08_spring_01_interface.iml" filepath="$PROJECT_DIR$/08_spring_01_interface/08_spring_01_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_spring_02_di/08_spring_02_di.iml" filepath="$PROJECT_DIR$/08_spring_02_di/08_spring_02_di.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_spring_03_aop_sample/08_spring_03_aop_sample.iml" filepath="$PROJECT_DIR$/08_spring_03_aop_sample/08_spring_03_aop_sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_spring_04_aop_joinpoint/08_spring_04_aop_joinpoint.iml" filepath="$PROJECT_DIR$/08_spring_04_aop_joinpoint/08_spring_04_aop_joinpoint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_spring_05_aop_advice/08_spring_05_aop_advice.iml" filepath="$PROJECT_DIR$/08_spring_05_aop_advice/08_spring_05_aop_advice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_spring_06_annotation_requried/08_spring_06_annotation_requried.iml" filepath="$PROJECT_DIR$/08_spring_06_annotation_requried/08_spring_06_annotation_requried.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_spring_07_annotation_autowire/08_spring_07_annotation_autowire.iml" filepath="$PROJECT_DIR$/08_spring_07_annotation_autowire/08_spring_07_annotation_autowire.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_spring_08_annotation_autoscan/08_spring_08_annotation_autoscan.iml" filepath="$PROJECT_DIR$/08_spring_08_annotation_autoscan/08_spring_08_annotation_autoscan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RemoteSystemsTempFiles/RemoteSystemsTempFiles.iml" filepath="$PROJECT_DIR$/RemoteSystemsTempFiles/RemoteSystemsTempFiles.iml" />
+    </modules>
+  </component>
+</project>
