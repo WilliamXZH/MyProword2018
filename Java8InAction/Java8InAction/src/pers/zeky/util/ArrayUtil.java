@@ -1,6 +1,5 @@
-package pers.zeky.chapter_5_stream_using.sec_2_map;
+package pers.zeky.util;
 
-import java.lang.reflect.Array;
 
 public class ArrayUtil {
 
@@ -15,8 +14,11 @@ public class ArrayUtil {
 		printArray(intBoxing(ts));
 	}
 	public static Integer[] intBoxing(int[] intArray){
-		Integer[] ints = new Integer[]{intarray}
-		return null;
+		Integer[] ints = new Integer[intArray.length];
+		for (int i=0;i<intArray.length;i++){
+			ints[i] = intArray[i];
+		}
+		return ints;
 	}
 	
 	public static Integer intBoxing(int i){

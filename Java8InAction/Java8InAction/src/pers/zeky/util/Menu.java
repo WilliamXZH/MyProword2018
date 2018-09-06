@@ -1,7 +1,10 @@
-package pers.zeky.chapter_4_leadin_stream.sec_2_stream_summary;
+package pers.zeky.util;
 
 import java.util.Arrays;
 import java.util.List;
+
+import pers.zeky.chapter_4_leadin_stream.sec_2_stream_summary.Dish;
+import pers.zeky.chapter_4_leadin_stream.sec_2_stream_summary.Dish.Type;
 
 public class Menu {
 
