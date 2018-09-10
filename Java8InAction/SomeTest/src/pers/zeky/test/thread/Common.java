@@ -32,7 +32,12 @@ public class Common {
 		c++;
 		//id = new Random().nextInt(1000);
 		id = Counter.getCounter();
-		
+		try {
+			Thread.sleep(1);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if (list.contains(id)){
 			System.out.println("Error-"+id.getVal());
 		}else if(id!=null){
